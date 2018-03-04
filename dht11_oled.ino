@@ -26,7 +26,6 @@ static const unsigned char PROGMEM smile16_glcd_bmp[] =
 #define SCR_W 128
 
 #define DHT11PIN 2
-
 #define OLED_RESET 4
 
 #define TEMP_REFRESH 2250
@@ -62,7 +61,7 @@ void loop()
     break;
     case DHTLIB_ERROR_CHECKSUM: 
     Serial.println("CE"); 
-//    display.println("Sensor checksum error");
+    display.println("Sensor checksum error");
     display.display();
     break;
     case DHTLIB_ERROR_TIMEOUT: 
